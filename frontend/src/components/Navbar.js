@@ -17,6 +17,12 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Scroll to top when navigation link is clicked
+  const handleNavClick = () => {
+    setIsOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About Me', path: '/about' },
@@ -39,7 +45,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+          <Link 
+            to="/" 
+            className="text-xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"
+            onClick={handleNavClick}
+          >
             AI Portfolio
           </Link>
 
@@ -49,6 +59,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={handleNavClick}
                 className={`nav-link ${
                   location.pathname === item.path ? 'active' : ''
                 } ${item.special ? 'resume-link' : ''}`}
@@ -82,7 +93,7 @@ const Navbar = () => {
                 className={`block px-4 py-2 nav-link ${
                   location.pathname === item.path ? 'active' : ''
                 } ${item.special ? 'resume-link my-2' : ''}`}
-                onClick={() => setIsOpen(false)}
+                onClick={handleNavClick}
               >
                 {item.name}
               </Link>

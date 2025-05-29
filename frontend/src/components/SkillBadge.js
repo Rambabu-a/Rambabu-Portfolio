@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const SkillBadge = ({ name, icon, index }) => {
+const SkillBadge = ({ name, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -9,8 +9,7 @@ const SkillBadge = ({ name, icon, index }) => {
       transition={{ delay: index * 0.1 }}
       className="skill-badge cursor-pointer"
     >
-      <span className="text-xl">{icon}</span>
-      <span className="text-sm font-medium">{name}</span>
+      <span className="skill-name">{name}</span>
     </motion.div>
   );
 };

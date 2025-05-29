@@ -83,37 +83,90 @@ body {
   z-index: 1;
 }
 
+/* Open to Work Badge */
+.open-to-work-badge {
+  background: rgba(0, 255, 136, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 30px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 24px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 500;
+  color: #00ff88;
+  box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.3;
+  }
+}
+
 /* Glowing Button Styles */
 .glow-button {
   position: relative;
   background: linear-gradient(45deg, #00ff88, #00d4ff);
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
   color: #000;
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+  min-width: 160px;
 }
 
 .glow-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 255, 136, 0.4);
+  background: linear-gradient(45deg, #00ff88, #00d4ff);
+  color: #000;
 }
 
 .glow-button-secondary {
-  background: transparent;
+  background: rgba(0, 255, 136, 0.1);
   border: 2px solid #00ff88;
   color: #00ff88;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
+  min-width: 160px;
+  backdrop-filter: blur(10px);
 }
 
 .glow-button-secondary:hover {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(0, 255, 136, 0.2);
+  border-color: #00ff88;
+  color: #00ff88;
+  transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 255, 136, 0.3);
 }
 
@@ -123,14 +176,15 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 8px 16px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   transition: all 0.3s ease;
   box-shadow: 
     0 4px 6px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  min-height: 60px;
 }
 
 .skill-badge:hover {
@@ -140,6 +194,19 @@ body {
   box-shadow: 
     0 8px 20px rgba(0, 255, 136, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.skill-badge img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.skill-badge .skill-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 /* Project Card Styles */
@@ -329,15 +396,46 @@ body {
   .glow-button {
     padding: 10px 20px;
     font-size: 14px;
+    min-width: 140px;
+  }
+  
+  .glow-button-secondary {
+    padding: 8px 18px;
+    font-size: 14px;
+    min-width: 140px;
   }
   
   .skill-badge {
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: 8px 12px;
+    font-size: 12px;
+    min-height: 50px;
+  }
+  
+  .skill-badge img {
+    width: 24px;
+    height: 24px;
   }
   
   .blog-card {
     height: auto;
     flex-direction: column;
+  }
+
+  .open-to-work-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem !important;
   }
 }
