@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { Github, Star, Code } from 'lucide-react';
 
 const Snippets = () => {
-  const [copiedId, setCopiedId] = useState(null);
-
   const codeSnippets = [
     {
       id: 1,
