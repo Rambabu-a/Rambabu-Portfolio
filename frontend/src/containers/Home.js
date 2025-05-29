@@ -187,7 +187,7 @@ const Home = () => {
                   <h3 className="text-xl font-semibold mb-4 text-green-400">Core Skills</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {skills.map((skill, index) => (
-                      <SkillBadge key={skill.name} {...skill} index={index} />
+                      <SkillBadge key={skill.name} name={skill.name} index={index} />
                     ))}
                   </div>
                 </div>
