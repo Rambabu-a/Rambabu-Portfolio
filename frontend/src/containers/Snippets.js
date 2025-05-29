@@ -362,62 +362,61 @@ module.exports = AggregationBuilder;`
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-10 border border-white/10 rounded-xl overflow-hidden"
+                className="bg-white/5 backdrop-blur-10 border border-white/10 rounded-xl p-8"
               >
-                {/* Snippet Header */}
-                <div className="p-6 border-b border-white/10">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{snippet.title}</h3>
-                      <p className="text-gray-300 text-sm mb-3">{snippet.description}</p>
-                      <div className="flex items-center gap-4 text-sm">
-                        <span className="flex items-center gap-2 text-green-400">
-                          <Code size={14} />
-                          {snippet.language}
-                        </span>
-                        <span className="flex items-center gap-2 text-yellow-400">
-                          <Star size={14} />
-                          {snippet.stars}
-                        </span>
-                      </div>
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-3">{snippet.title}</h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">{snippet.description}</p>
+                    
+                    <div className="flex items-center gap-4 text-sm mb-6">
+                      <span className="flex items-center gap-2 text-green-400">
+                        <Code size={14} />
+                        {snippet.language}
+                      </span>
+                      <span className="flex items-center gap-2 text-yellow-400">
+                        <Star size={14} />
+                        {snippet.stars} stars
+                      </span>
+                      <span className="px-3 py-1 bg-blue-400/10 text-blue-400 border border-blue-400/20 rounded-full text-xs font-medium">
+                        {snippet.category}
+                      </span>
                     </div>
                     
-                    <div className="flex gap-3">
-                      <button
-                        onClick={() => copyToClipboard(snippet.code, snippet.id)}
-                        className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-sm hover:bg-white/20 transition-all"
-                      >
-                        {copiedId === snippet.id ? (
-                          <>
-                            <CheckCircle size={16} className="text-green-400" />
-                            Copied!
-                          </>
-                        ) : (
-                          <>
-                            <Copy size={16} />
-                            Copy
-                          </>
-                        )}
-                      </button>
-                      
-                      <a
-                        href="https://github.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 glow-button-secondary text-sm"
-                      >
-                        <Github size={16} />
-                        GitHub
-                      </a>
-                    </div>
+                    <p className="text-gray-400 text-sm mb-6">
+                      View the complete implementation and usage examples on GitHub. This snippet includes 
+                      detailed documentation, test cases, and real-world usage examples.
+                    </p>
                   </div>
-                </div>
-
-                {/* Code Block */}
-                <div className="relative">
-                  <pre className="code-block text-sm overflow-x-auto p-6 bg-black/20">
-                    <code className="text-gray-300">{snippet.code}</code>
-                  </pre>
+                  
+                  <div className="flex gap-3">
+                    <a
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 glow-button text-sm"
+                    >
+                      <Github size={16} />
+                      View on GitHub
+                    </a>
+                    
+                    <button
+                      onClick={() => copyToClipboard(snippet.code, snippet.id)}
+                      className="flex items-center gap-2 px-6 py-3 glow-button-secondary text-sm"
+                    >
+                      {copiedId === snippet.id ? (
+                        <>
+                          <CheckCircle size={16} className="text-green-400" />
+                          Copied!
+                        </>
+                      ) : (
+                        <>
+                          <Copy size={16} />
+                          Copy Link
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             ))}
