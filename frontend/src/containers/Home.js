@@ -26,14 +26,14 @@ const Home = () => {
   }, []);
 
   const skills = [
-    { name: 'React.js', icon: '⚛️' },
-    { name: 'JavaScript', icon: '🟨' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'AI/ML', icon: '🤖' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'Git', icon: '📚' }
+    { name: 'React.js' },
+    { name: 'JavaScript' },
+    { name: 'Node.js' },
+    { name: 'Python' },
+    { name: 'AI/ML' },
+    { name: 'TypeScript' },
+    { name: 'MongoDB' },
+    { name: 'Git' }
   ];
 
   const featuredProjects = [
