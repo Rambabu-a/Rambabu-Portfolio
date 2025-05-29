@@ -108,12 +108,19 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            {/* Open to Work Badge */}
+            <div className="open-to-work-badge">
+              <div className="status-dot"></div>
+              <span>Open to Work</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
               Alex Chen
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              AI-Focused Full Stack Developer
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+              AI-Focused Full Stack Developer crafting the future of web applications
             </p>
             
             {/* Social Icons */}
@@ -133,13 +140,13 @@ const Home = () => {
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/resume" className="glow-button">
-                <FileText size={20} />
+                <FileText size={18} />
                 Download Resume
               </Link>
               <Link to="/blogs" className="glow-button-secondary">
-                <ExternalLink size={20} />
+                <ExternalLink size={18} />
                 View Blogs
               </Link>
             </div>
