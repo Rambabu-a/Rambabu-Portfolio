@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Copy, CheckCircle, Code, Star } from 'lucide-react';
+import { Github, Star, Code } from 'lucide-react';
 
 const Snippets = () => {
   const [copiedId, setCopiedId] = useState(null);
