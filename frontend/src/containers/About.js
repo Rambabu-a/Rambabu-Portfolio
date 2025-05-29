@@ -5,22 +5,22 @@ import SkillBadge from '../components/SkillBadge';
 
 const About = () => {
   const skills = [
-    { name: 'React.js', icon: '⚛️' },
-    { name: 'JavaScript', icon: '🟨' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'AI/ML', icon: '🤖' },
-    { name: 'TensorFlow', icon: '🧠' },
-    { name: 'PyTorch', icon: '🔥' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'PostgreSQL', icon: '🐘' },
-    { name: 'AWS', icon: '☁️' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Git', icon: '📚' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'Express', icon: '🚂' },
-    { name: 'GraphQL', icon: '📊' }
+    { name: 'React.js' },
+    { name: 'JavaScript' },
+    { name: 'TypeScript' },
+    { name: 'Node.js' },
+    { name: 'Python' },
+    { name: 'AI/ML' },
+    { name: 'TensorFlow' },
+    { name: 'PyTorch' },
+    { name: 'MongoDB' },
+    { name: 'PostgreSQL' },
+    { name: 'AWS' },
+    { name: 'Docker' },
+    { name: 'Git' },
+    { name: 'Next.js' },
+    { name: 'Express' },
+    { name: 'GraphQL' }
   ];
 
   const experiences = [
