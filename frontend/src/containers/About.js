@@ -225,7 +225,7 @@ const About = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {skills.map((skill, index) => (
-                <SkillBadge key={skill.name} {...skill} index={index} />
+                <SkillBadge key={skill.name} name={skill.name} index={index} />
               ))}
             </div>
           </motion.div>
