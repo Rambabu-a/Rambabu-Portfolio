@@ -399,23 +399,6 @@ module.exports = AggregationBuilder;`
                       <Github size={16} />
                       View on GitHub
                     </a>
-                    
-                    <button
-                      onClick={() => copyToClipboard(snippet.code, snippet.id)}
-                      className="flex items-center gap-2 px-6 py-3 glow-button-secondary text-sm"
-                    >
-                      {copiedId === snippet.id ? (
-                        <>
-                          <CheckCircle size={16} className="text-green-400" />
-                          Copied!
-                        </>
-                      ) : (
-                        <>
-                          <Copy size={16} />
-                          Copy Link
-                        </>
-                      )}
-                    </button>
                   </div>
                 </div>
               </motion.div>
